@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import drugs from "../content/drugs.json";
 
 /**
  * Drug of the Day — single‑page prototype (animated + audio cues + back nav + 09:00 unlock)
@@ -313,7 +314,25 @@ function useDeviceLocation() {
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function DrugOfTheDay() {
-  const [drug] = useState<Drug>(RAMIPRIL);
+ const START_DATE_ISO = "2025-09-01"; // change to the date you want Day 1 to begin
+const [drug] = useState<Drug>(() => pickDrugForToday());
+
+function pickDrugForToday(): Drug {
+  const now = new Date();
+  // Today at 09:00 local
+  const today9 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 9, 0, 0, 0);
+  // If it's before 09:00, use yesterday's window; otherwise use today's
+  const boundaryNow =
+    now.getTime() >= today9.getTime() ? today9 : new Date(today9.getTime() - 24 * 3600 * 1000);
+
+  const start9 = new Date(START_DATE_ISO + "T09:00:00");
+  const days = Math.floor((boundaryNow.getTime() - start9.getTime()) / (24 * 3600 * 1000));
+
+  const list = drugs as any[];
+  const len = Array.isArray(list) ? list.length : 0;
+  const idx = len > 0 ? ((days % len) + len) % len : 0; // safe modulo
+  return len > 0 ? list[idx] : list[0];
+}
   const total = drug.anchors.length;
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<AnchorId, string[]>>({
