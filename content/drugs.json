@@ -1,2 +1,169 @@
-Ramipril 
-Atorvastatin
+[
+  {
+    "name": "ramipril",
+    "tags": ["cardio", "renal", "safety"],
+    "anchors": [
+      {
+        "id": "class",
+        "title": "Drug class",
+        "prompt": "Which class does ramipril belong to?",
+        "type": "single",
+        "options": [
+          { "id": "ace", "label": "ACE inhibitor" },
+          { "id": "arb", "label": "Angiotensin II receptor blocker (ARB)" },
+          { "id": "ccb", "label": "Dihydropyridine calcium-channel blocker" },
+          { "id": "bb", "label": "Beta-blocker" }
+        ],
+        "correct": ["ace"],
+        "explanation": "Ramipril is an ACE inhibitor (prodrug → ramiprilat).",
+        "rationales": {
+          "ace": "Correct.",
+          "arb": "ARB blocks AT1 receptor, not ACE.",
+          "ccb": "Different mechanism.",
+          "bb": "Different mechanism."
+        }
+      },
+      {
+        "id": "indications",
+        "title": "Common indications",
+        "prompt": "Select ALL common indications.",
+        "type": "multi",
+        "options": [
+          { "id": "htn", "label": "Hypertension" },
+          { "id": "hfrEF", "label": "Heart failure with reduced EF" },
+          { "id": "postmi", "label": "Post-MI / secondary prevention" },
+          { "id": "ckd", "label": "CKD with albuminuria (incl. diabetic nephropathy)" },
+          { "id": "angina", "label": "Stable angina" },
+          { "id": "migraine", "label": "Migraine prophylaxis" }
+        ],
+        "correct": ["htn", "hfrEF", "postmi", "ckd"],
+        "explanation": "Standard indications are HTN, HFrEF, post-MI, CKD with albuminuria."
+      },
+      {
+        "id": "moa",
+        "title": "Mechanism of action",
+        "prompt": "Which statement best describes the mechanism?",
+        "type": "single",
+        "options": [
+          { "id": "moa_true", "label": "Inhibits ACE → ↓Ang II & ↓aldosterone + ↑bradykinin → vasodilation" },
+          { "id": "moa_arb", "label": "Blocks AT1 receptor (ARB)" },
+          { "id": "moa_ccb", "label": "Blocks L-type Ca²⁺ channels" },
+          { "id": "moa_renin", "label": "Direct renin inhibitor" }
+        ],
+        "correct": ["moa_true"],
+        "explanation": "ACE inhibition lowers Ang II/aldosterone; bradykinin rises."
+      },
+      {
+        "id": "adrs",
+        "title": "Important adverse reactions",
+        "prompt": "Select ALL clinically important ADRs.",
+        "type": "multi",
+        "options": [
+          { "id": "cough", "label": "Dry cough" },
+          { "id": "angio", "label": "Angioedema" },
+          { "id": "k", "label": "Hyperkalaemia" },
+          { "id": "hypo", "label": "Symptomatic hypotension" },
+          { "id": "renal", "label": "Rise in creatinine/AKI risk" },
+          { "id": "gingiva", "label": "Gingival hyperplasia" },
+          { "id": "brady", "label": "Bradycardia" }
+        ],
+        "correct": ["cough", "angio", "k", "hypo", "renal"],
+        "explanation": "Cough/angioedema (bradykinin), hyperkalaemia, hypotension, creatinine rise."
+      },
+      {
+        "id": "interactions",
+        "title": "Important drug–drug interactions",
+        "prompt": "Select ALL interactions of concern.",
+        "type": "multi",
+        "options": [
+          { "id": "kplus", "label": "K⁺ supplements / K-sparing diuretics" },
+          { "id": "nsaids", "label": "NSAIDs (esp. chronic)" },
+          { "id": "lithium", "label": "Lithium" },
+          { "id": "dualraas", "label": "Dual RAAS blockade (ARB/aliskiren)" },
+          { "id": "gfj", "label": "Grapefruit juice" },
+          { "id": "ppi", "label": "PPIs" }
+        ],
+        "correct": ["kplus", "nsaids", "lithium", "dualraas"],
+        "explanation": "↑K⁺ risk; NSAIDs blunt effect & ↑AKI; lithium ↑; avoid dual RAAS."
+      }
+    ]
+  },
+  {
+    "name": "atorvastatin",
+    "tags": ["cardio"],
+    "anchors": [
+      {
+        "id": "class",
+        "title": "Drug class",
+        "prompt": "Which class does atorvastatin belong to?",
+        "type": "single",
+        "options": [
+          { "id": "statin", "label": "HMG-CoA reductase inhibitor (statin)" },
+          { "id": "ace", "label": "ACE inhibitor" },
+          { "id": "ccb", "label": "Calcium-channel blocker" },
+          { "id": "diuretic", "label": "Thiazide diuretic" }
+        ],
+        "correct": ["statin"],
+        "explanation": "Atorvastatin is a statin."
+      },
+      {
+        "id": "indications",
+        "title": "Common indications",
+        "prompt": "Select ALL common indications.",
+        "type": "multi",
+        "options": [
+          { "id": "hyperlipid", "label": "Primary hypercholesterolaemia" },
+          { "id": "prevention", "label": "Cardiovascular risk reduction / secondary prevention" },
+          { "id": "angina", "label": "Stable angina treatment" },
+          { "id": "pain", "label": "Analgesia" }
+        ],
+        "correct": ["hyperlipid", "prevention"],
+        "explanation": "Lipid lowering and CV risk reduction."
+      },
+      {
+        "id": "moa",
+        "title": "Mechanism of action",
+        "prompt": "Which statement best describes the mechanism?",
+        "type": "single",
+        "options": [
+          { "id": "moa_true", "label": "Inhibits HMG-CoA reductase → ↓cholesterol synthesis; ↑LDL receptors" },
+          { "id": "moa_ace", "label": "Inhibits ACE" },
+          { "id": "moa_ccb", "label": "Blocks L-type Ca²⁺ channels" },
+          { "id": "moa_diur", "label": "Inhibits Na⁺/Cl⁻ cotransporter in DCT" }
+        ],
+        "correct": ["moa_true"],
+        "explanation": "Statin mechanism."
+      },
+      {
+        "id": "adrs",
+        "title": "Important adverse reactions",
+        "prompt": "Select ALL clinically important ADRs.",
+        "type": "multi",
+        "options": [
+          { "id": "myopathy", "label": "Myalgia/myopathy (rare rhabdomyolysis)" },
+          { "id": "lfts", "label": "↑Transaminases/hepatotoxicity" },
+          { "id": "gi", "label": "GI upset" },
+          { "id": "cough", "label": "Dry cough" },
+          { "id": "hyperk", "label": "Hyperkalaemia" }
+        ],
+        "correct": ["myopathy", "lfts", "gi"],
+        "explanation": "Muscle symptoms, LFT elevation, GI upset."
+      },
+      {
+        "id": "interactions",
+        "title": "Important drug–drug interactions",
+        "prompt": "Select ALL interactions of concern.",
+        "type": "multi",
+        "options": [
+          { "id": "cyp3a4", "label": "Strong CYP3A4 inhibitors (e.g., clarithromycin, azoles)" },
+          { "id": "gfj", "label": "Grapefruit juice (large amounts)" },
+          { "id": "fibrates", "label": "Fibrates (e.g., gemfibrozil)" },
+          { "id": "warfarin", "label": "Warfarin" }
+        ],
+        "correct": ["cyp3a4", "gfj", "fibrates"],
+        "explanation": "↑Statin levels → ↑myopathy risk; grapefruit/CYP3A4 inhibitors; fibrates add risk."
+      }
+    ]
+  }
+]
+
