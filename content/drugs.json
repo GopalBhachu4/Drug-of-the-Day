@@ -15,13 +15,7 @@
           { "id": "bb", "label": "Beta-blocker" }
         ],
         "correct": ["ace"],
-        "explanation": "Ramipril is an ACE inhibitor (prodrug → ramiprilat).",
-        "rationales": {
-          "ace": "Correct.",
-          "arb": "ARB blocks AT1 receptor, not ACE.",
-          "ccb": "Different mechanism.",
-          "bb": "Different mechanism."
-        }
+        "explanation": "Ramipril is an ACE inhibitor."
       },
       {
         "id": "indications",
@@ -32,12 +26,11 @@
           { "id": "htn", "label": "Hypertension" },
           { "id": "hfrEF", "label": "Heart failure with reduced EF" },
           { "id": "postmi", "label": "Post-MI / secondary prevention" },
-          { "id": "ckd", "label": "CKD with albuminuria (incl. diabetic nephropathy)" },
-          { "id": "angina", "label": "Stable angina" },
-          { "id": "migraine", "label": "Migraine prophylaxis" }
+          { "id": "ckd", "label": "CKD with albuminuria" },
+          { "id": "angina", "label": "Stable angina" }
         ],
         "correct": ["htn", "hfrEF", "postmi", "ckd"],
-        "explanation": "Standard indications are HTN, HFrEF, post-MI, CKD with albuminuria."
+        "explanation": "Standard indications."
       },
       {
         "id": "moa",
@@ -45,13 +38,12 @@
         "prompt": "Which statement best describes the mechanism?",
         "type": "single",
         "options": [
-          { "id": "moa_true", "label": "Inhibits ACE → ↓Ang II & ↓aldosterone + ↑bradykinin → vasodilation" },
+          { "id": "moa_true", "label": "Inhibits ACE → ↓Ang II/aldosterone; ↑bradykinin" },
           { "id": "moa_arb", "label": "Blocks AT1 receptor (ARB)" },
-          { "id": "moa_ccb", "label": "Blocks L-type Ca²⁺ channels" },
-          { "id": "moa_renin", "label": "Direct renin inhibitor" }
+          { "id": "moa_ccb", "label": "Blocks L-type Ca²⁺ channels" }
         ],
         "correct": ["moa_true"],
-        "explanation": "ACE inhibition lowers Ang II/aldosterone; bradykinin rises."
+        "explanation": "ACE inhibition with bradykinin effect."
       },
       {
         "id": "adrs",
@@ -63,12 +55,10 @@
           { "id": "angio", "label": "Angioedema" },
           { "id": "k", "label": "Hyperkalaemia" },
           { "id": "hypo", "label": "Symptomatic hypotension" },
-          { "id": "renal", "label": "Rise in creatinine/AKI risk" },
-          { "id": "gingiva", "label": "Gingival hyperplasia" },
-          { "id": "brady", "label": "Bradycardia" }
+          { "id": "renal", "label": "Rise in creatinine/AKI risk" }
         ],
         "correct": ["cough", "angio", "k", "hypo", "renal"],
-        "explanation": "Cough/angioedema (bradykinin), hyperkalaemia, hypotension, creatinine rise."
+        "explanation": "Cough/angioedema, hyperkalaemia, hypotension, creatinine rise."
       },
       {
         "id": "interactions",
@@ -79,9 +69,7 @@
           { "id": "kplus", "label": "K⁺ supplements / K-sparing diuretics" },
           { "id": "nsaids", "label": "NSAIDs (esp. chronic)" },
           { "id": "lithium", "label": "Lithium" },
-          { "id": "dualraas", "label": "Dual RAAS blockade (ARB/aliskiren)" },
-          { "id": "gfj", "label": "Grapefruit juice" },
-          { "id": "ppi", "label": "PPIs" }
+          { "id": "dualraas", "label": "Dual RAAS blockade (ARB/aliskiren)" }
         ],
         "correct": ["kplus", "nsaids", "lithium", "dualraas"],
         "explanation": "↑K⁺ risk; NSAIDs blunt effect & ↑AKI; lithium ↑; avoid dual RAAS."
@@ -100,8 +88,7 @@
         "options": [
           { "id": "statin", "label": "HMG-CoA reductase inhibitor (statin)" },
           { "id": "ace", "label": "ACE inhibitor" },
-          { "id": "ccb", "label": "Calcium-channel blocker" },
-          { "id": "diuretic", "label": "Thiazide diuretic" }
+          { "id": "ccb", "label": "Calcium-channel blocker" }
         ],
         "correct": ["statin"],
         "explanation": "Atorvastatin is a statin."
@@ -114,8 +101,7 @@
         "options": [
           { "id": "hyperlipid", "label": "Primary hypercholesterolaemia" },
           { "id": "prevention", "label": "Cardiovascular risk reduction / secondary prevention" },
-          { "id": "angina", "label": "Stable angina treatment" },
-          { "id": "pain", "label": "Analgesia" }
+          { "id": "angina", "label": "Stable angina treatment" }
         ],
         "correct": ["hyperlipid", "prevention"],
         "explanation": "Lipid lowering and CV risk reduction."
@@ -126,10 +112,8 @@
         "prompt": "Which statement best describes the mechanism?",
         "type": "single",
         "options": [
-          { "id": "moa_true", "label": "Inhibits HMG-CoA reductase → ↓cholesterol synthesis; ↑LDL receptors" },
-          { "id": "moa_ace", "label": "Inhibits ACE" },
-          { "id": "moa_ccb", "label": "Blocks L-type Ca²⁺ channels" },
-          { "id": "moa_diur", "label": "Inhibits Na⁺/Cl⁻ cotransporter in DCT" }
+          { "id": "moa_true", "label": "Inhibits HMG-CoA reductase → ↓cholesterol; ↑LDL receptors" },
+          { "id": "moa_ace", "label": "Inhibits ACE" }
         ],
         "correct": ["moa_true"],
         "explanation": "Statin mechanism."
@@ -142,28 +126,4 @@
         "options": [
           { "id": "myopathy", "label": "Myalgia/myopathy (rare rhabdomyolysis)" },
           { "id": "lfts", "label": "↑Transaminases/hepatotoxicity" },
-          { "id": "gi", "label": "GI upset" },
-          { "id": "cough", "label": "Dry cough" },
-          { "id": "hyperk", "label": "Hyperkalaemia" }
-        ],
-        "correct": ["myopathy", "lfts", "gi"],
-        "explanation": "Muscle symptoms, LFT elevation, GI upset."
-      },
-      {
-        "id": "interactions",
-        "title": "Important drug–drug interactions",
-        "prompt": "Select ALL interactions of concern.",
-        "type": "multi",
-        "options": [
-          { "id": "cyp3a4", "label": "Strong CYP3A4 inhibitors (e.g., clarithromycin, azoles)" },
-          { "id": "gfj", "label": "Grapefruit juice (large amounts)" },
-          { "id": "fibrates", "label": "Fibrates (e.g., gemfibrozil)" },
-          { "id": "warfarin", "label": "Warfarin" }
-        ],
-        "correct": ["cyp3a4", "gfj", "fibrates"],
-        "explanation": "↑Statin levels → ↑myopathy risk; grapefruit/CYP3A4 inhibitors; fibrates add risk."
-      }
-    ]
-  }
-]
-
+          { "id": "gi", "label": "GI upset
