@@ -26,8 +26,7 @@
           { "id": "htn", "label": "Hypertension" },
           { "id": "hfrEF", "label": "Heart failure with reduced EF" },
           { "id": "postmi", "label": "Post-MI / secondary prevention" },
-          { "id": "ckd", "label": "CKD with albuminuria" },
-          { "id": "angina", "label": "Stable angina" }
+          { "id": "ckd", "label": "CKD with albuminuria" }
         ],
         "correct": ["htn", "hfrEF", "postmi", "ckd"],
         "explanation": "Standard indications."
@@ -126,4 +125,24 @@
         "options": [
           { "id": "myopathy", "label": "Myalgia/myopathy (rare rhabdomyolysis)" },
           { "id": "lfts", "label": "↑Transaminases/hepatotoxicity" },
-          { "id": "gi", "label": "GI upset
+          { "id": "gi", "label": "GI upset" }
+        ],
+        "correct": ["myopathy", "lfts", "gi"],
+        "explanation": "Muscle symptoms, LFT elevation, GI upset."
+      },
+      {
+        "id": "interactions",
+        "title": "Important drug–drug interactions",
+        "prompt": "Select ALL interactions of concern.",
+        "type": "multi",
+        "options": [
+          { "id": "cyp3a4", "label": "Strong CYP3A4 inhibitors" },
+          { "id": "gfj", "label": "Grapefruit juice (large amounts)" },
+          { "id": "fibrates", "label": "Fibrates (e.g., gemfibrozil)" }
+        ],
+        "correct": ["cyp3a4", "gfj", "fibrates"],
+        "explanation": "↑Statin levels → ↑myopathy risk; grapefruit/CYP3A4 inhibitors; fibrates add risk."
+      }
+    ]
+  }
+]
