@@ -12,73 +12,80 @@
           { "id": "ace", "label": "ACE inhibitor" },
           { "id": "arb", "label": "Angiotensin II receptor blocker (ARB)" },
           { "id": "ccb", "label": "Dihydropyridine calcium-channel blocker" },
-          { "id": "bb", "label": "Beta-blocker" }
+          { "id": "bb",  "label": "β-blocker" },
+          { "id": "renin", "label": "Direct renin inhibitor" }
         ],
         "correct": ["ace"],
-        "explanation": "Ramipril is an ACE inhibitor (prodrug → ramiprilat)."
+        "explanation": "Ramipril is an ACE inhibitor (prodrug → ramiprilat). ARBs block AT1 receptors (not ACE); CCBs and β-blockers are different classes; aliskiren is the direct renin inhibitor."
       },
       {
         "id": "indications",
         "title": "Common indications",
-        "prompt": "Select ALL common indications.",
+        "prompt": "Select ALL common indications for ramipril.",
         "type": "multi",
         "options": [
           { "id": "htn", "label": "Hypertension" },
-          { "id": "hfrEF", "label": "Heart failure with reduced EF" },
+          { "id": "hfref", "label": "Heart failure with reduced ejection fraction" },
           { "id": "postmi", "label": "Post-MI / secondary prevention" },
-          { "id": "ckd", "label": "CKD with albuminuria (incl. diabetic nephropathy)" },
-          { "id": "angina", "label": "Stable angina" }
+          { "id": "ckdprot", "label": "CKD with albuminuria (including diabetic nephropathy)" },
+          { "id": "angina", "label": "Stable angina treatment" },
+          { "id": "asthma", "label": "Asthma maintenance therapy" }
         ],
-        "correct": ["htn", "hfrEF", "postmi", "ckd"],
-        "explanation": "HTN, HFrEF, post-MI, CKD with albuminuria are standard indications."
+        "correct": ["htn", "hfref", "postmi", "ckdprot"],
+        "explanation": "ACE inhibitors are core therapy for HTN, HFrEF, post-MI remodeling/risk reduction, and renoprotection in albuminuric CKD. They are not first-line angina anti-ischaemics and have no role in asthma."
       },
       {
         "id": "moa",
         "title": "Mechanism of action",
-        "prompt": "Which statement best describes the mechanism?",
+        "prompt": "Which best describes ramipril’s mechanism?",
         "type": "single",
         "options": [
-          { "id": "moa_true", "label": "Inhibits ACE → ↓Ang II & ↓aldosterone + ↑bradykinin → vasodilation" },
-          { "id": "moa_arb", "label": "Blocks AT1 receptor (ARB)" },
-          { "id": "moa_ccb", "label": "Blocks L-type Ca²⁺ channels" }
+          { "id": "true", "label": "Inhibits ACE → ↓Ang II and ↓aldosterone; ↑bradykinin → vasodilation" },
+          { "id": "arbmech", "label": "Blocks AT1 receptors (ARB)" },
+          { "id": "ccbmech", "label": "Blocks L-type Ca²⁺ channels in vascular smooth muscle" },
+          { "id": "reninmech", "label": "Directly inhibits renin" }
         ],
-        "correct": ["moa_true"],
-        "explanation": "ACE inhibition lowers Ang II/aldosterone; bradykinin rises."
+        "correct": ["true"],
+        "explanation": "ACE inhibition reduces angiotensin II and aldosterone and increases bradykinin, producing vasodilation and natriuresis."
       },
       {
         "id": "adrs",
         "title": "Important adverse reactions",
-        "prompt": "Select ALL clinically important ADRs.",
+        "prompt": "Select ALL clinically important adverse reactions of ramipril.",
         "type": "multi",
         "options": [
           { "id": "cough", "label": "Dry cough" },
           { "id": "angio", "label": "Angioedema" },
-          { "id": "k", "label": "Hyperkalaemia" },
-          { "id": "hypo", "label": "Symptomatic hypotension" },
-          { "id": "renal", "label": "Rise in creatinine/AKI risk" }
+          { "id": "hyperk", "label": "Hyperkalaemia" },
+          { "id": "hypot", "label": "Symptomatic hypotension" },
+          { "id": "creat", "label": "Rise in creatinine/AKI risk" },
+          { "id": "gingival", "label": "Gingival hyperplasia" }
         ],
-        "correct": ["cough", "angio", "k", "hypo", "renal"],
-        "explanation": "Cough/angioedema (bradykinin), hyperkalaemia, hypotension, creatinine rise."
+        "correct": ["cough", "angio", "hyperk", "hypot", "creat"],
+        "explanation": "Cough/angioedema from bradykinin; hyperkalaemia and creatinine rise due to reduced efferent arteriolar tone; first-dose hypotension possible. Gingival hyperplasia is typical of nifedipine (CCB), not ACEIs."
       },
       {
         "id": "interactions",
         "title": "Important drug–drug interactions",
-        "prompt": "Select ALL interactions of concern.",
+        "prompt": "Select ALL clinically important interactions with ramipril.",
         "type": "multi",
         "options": [
-          { "id": "kplus", "label": "K⁺ supplements / K-sparing diuretics (e.g., spironolactone)" },
-          { "id": "nsaids", "label": "NSAIDs (esp. chronic)" },
+          { "id": "kplus", "label": "Potassium supplements or K-sparing diuretics (e.g., spironolactone)" },
+          { "id": "nsaids", "label": "Chronic NSAIDs" },
           { "id": "lithium", "label": "Lithium" },
-          { "id": "dualraas", "label": "Dual RAAS blockade (ARB/aliskiren)" }
+          { "id": "dualraas", "label": "Dual RAAS blockade (ARB/aliskiren)" },
+          { "id": "ppi", "label": "Proton-pump inhibitors" },
+          { "id": "macrolide", "label": "Macrolide antibiotics" }
         ],
         "correct": ["kplus", "nsaids", "lithium", "dualraas"],
-        "explanation": "↑K⁺ risk; NSAIDs blunt effect & ↑AKI; lithium ↑; avoid dual RAAS."
+        "explanation": "K-raising agents ↑hyperkalaemia risk; NSAIDs blunt antihypertensive/renoprotective effect and ↑AKI risk; ACEIs ↑lithium concentrations; avoid dual RAAS blockade. PPIs/macrolides are not typical interaction problems."
       }
     ]
   },
+
   {
     "name": "atorvastatin",
-    "tags": ["cardio"],
+    "tags": ["cardio", "lipids"],
     "anchors": [
       {
         "id": "class",
@@ -93,285 +100,231 @@
           { "id": "ccb",   "label": "Calcium-channel blocker" }
         ],
         "correct": ["statin"],
-        "explanation": "Atorvastatin is a statin."
+        "explanation": "Atorvastatin is a statin; the others are different lipid or cardiovascular classes."
       },
       {
         "id": "indications",
         "title": "Common indications",
-        "prompt": "Select ALL common indications.",
+        "prompt": "Select ALL appropriate indications for atorvastatin.",
         "type": "multi",
         "options": [
-          { "id": "hyperlipid", "label": "Primary hypercholesterolaemia" },
-          { "id": "fh",         "label": "Familial hypercholesterolaemia (adjunct)" },
-          { "id": "prevention", "label": "CV risk reduction / secondary prevention" },
-          { "id": "angina",     "label": "Stable angina treatment" },
-          { "id": "pain",       "label": "Analgesia" }
+          { "id": "primary", "label": "Primary hypercholesterolaemia" },
+          { "id": "fh", "label": "Familial hypercholesterolaemia (adjunct/first-line depending on severity)" },
+          { "id": "cvprev", "label": "Cardiovascular risk reduction / secondary prevention" },
+          { "id": "angina", "label": "Symptom relief in stable angina" },
+          { "id": "pain", "label": "Analgesia" }
         ],
-        "correct": ["hyperlipid", "fh", "prevention"],
-        "explanation": "Lipid lowering (incl. familial forms); cardiovascular risk reduction."
+        "correct": ["primary", "fh", "cvprev"],
+        "explanation": "Statins lower LDL and reduce CV events for primary/secondary prevention and in familial hypercholesterolaemia. They are not for immediate angina symptom relief and are not analgesics."
       },
       {
         "id": "moa",
         "title": "Mechanism of action",
-        "prompt": "Which statement best describes the mechanism?",
+        "prompt": "Which statement best describes atorvastatin’s mechanism?",
         "type": "single",
         "options": [
-          { "id": "moa_true", "label": "Inhibits HMG-CoA reductase → ↓cholesterol synthesis; ↑LDL receptors" },
-          { "id": "moa_upreg","label": "Upregulates hepatic LDL receptors increasing LDL clearance" },
-          { "id": "moa_ace",  "label": "Inhibits ACE" },
-          { "id": "moa_ccb",  "label": "Blocks L-type Ca²⁺ channels" }
+          { "id": "true", "label": "Inhibits HMG-CoA reductase → ↓hepatic cholesterol synthesis; ↑LDL receptors" },
+          { "id": "ace", "label": "Inhibits ACE to reduce Ang II" },
+          { "id": "ccb", "label": "Blocks L-type Ca²⁺ channels" },
+          { "id": "upregOnly", "label": "Only upregulates hepatic LDL receptors without affecting synthesis" }
         ],
-        "correct": ["moa_true"],
-        "explanation": "Primary action is HMG-CoA reductase inhibition; LDL-receptor upregulation follows."
+        "correct": ["true"],
+        "explanation": "Primary action is enzyme inhibition; LDL-receptor upregulation is a downstream effect. The other mechanisms are unrelated."
       },
       {
         "id": "adrs",
         "title": "Important adverse reactions",
-        "prompt": "Select ALL clinically important ADRs.",
+        "prompt": "Select ALL clinically important adverse reactions of atorvastatin.",
         "type": "multi",
         "options": [
           { "id": "myopathy", "label": "Myalgia/myopathy (rare rhabdomyolysis)" },
-          { "id": "lfts",     "label": "↑Transaminases/hepatotoxicity" },
-          { "id": "gi",       "label": "GI upset" },
-          { "id": "dm",       "label": "Small increase in diabetes risk" },
-          { "id": "cough",    "label": "Dry cough" }
+          { "id": "lfts", "label": "↑Transaminases/hepatotoxicity" },
+          { "id": "gi", "label": "GI upset" },
+          { "id": "dm", "label": "Slight increase in diabetes risk" },
+          { "id": "cough", "label": "Dry cough" },
+          { "id": "ankleEdema", "label": "Ankle oedema" }
         ],
         "correct": ["myopathy", "lfts", "gi", "dm"],
-        "explanation": "Muscle symptoms, LFT elevation, GI upset; slight ↑ risk of new-onset diabetes."
+        "explanation": "Muscle symptoms and LFT elevation are the key concerns; GI upset is common; there is a small increase in diabetes risk. Dry cough is typical of ACEIs; ankle oedema is more typical with dihydropyridine CCBs."
       },
-            {
+      {
         "id": "interactions",
         "title": "Important drug–drug interactions",
-        "prompt": "Select ALL interactions of concern.",
+        "prompt": "Select ALL clinically important interactions with atorvastatin.",
         "type": "multi",
         "options": [
-          { "id": "cyp3a4",   "label": "Strong CYP3A4 inhibitors (e.g., clarithromycin, azoles, protease inhibitors)" },
-          { "id": "gfj",      "label": "Grapefruit juice (large amounts)" },
+          { "id": "cyp3a4", "label": "Strong CYP3A4 inhibitors (e.g., clarithromycin, azoles, HIV protease inhibitors)" },
+          { "id": "gfj", "label": "Grapefruit juice (large amounts)" },
           { "id": "fibrates", "label": "Fibrates (e.g., gemfibrozil)" },
-          { "id": "warfarin", "label": "Warfarin" }
+          { "id": "warfarin", "label": "Warfarin" },
+          { "id": "acei", "label": "ACE inhibitors" }
         ],
         "correct": ["cyp3a4", "gfj", "fibrates"],
-        "explanation": "CYP3A4 inhibitors & grapefruit raise statin levels; fibrates add myopathy risk."
+        "explanation": "CYP3A4 inhibitors and grapefruit increase statin levels → ↑myopathy risk; fibrates further increase myopathy risk. Warfarin/ACEIs are not primary interaction concerns for atorvastatin."
       }
     ]
   },
+
+  {
+    "name": "bisoprolol",
+    "tags": ["cardio"],
+    "anchors": [
+      {
+        "id": "class",
+        "title": "Drug class",
+        "prompt": "Which class does bisoprolol belong to?",
+        "type": "single",
+        "options": [
+          { "id": "bb1", "label": "β1-selective β-blocker" },
+          { "id": "ccb", "label": "Calcium-channel blocker" },
+          { "id": "ace", "label": "ACE inhibitor" },
+          { "id": "loop", "label": "Loop diuretic" },
+          { "id": "arb", "label": "Angiotensin II receptor blocker (ARB)" }
+        ],
+        "correct": ["bb1"],
+        "explanation": "Bisoprolol is a cardioselective (β1-predominant) β-blocker."
+      },
+      {
+        "id": "indications",
+        "title": "Common indications",
+        "prompt": "Select ALL appropriate indications for bisoprolol.",
+        "type": "multi",
+        "options": [
+          { "id": "htn", "label": "Hypertension (adjunct/alternative)" },
+          { "id": "angina", "label": "Stable angina (anti-ischaemic)" },
+          { "id": "hfref", "label": "Heart failure with reduced EF (evidence-based)" },
+          { "id": "afRate", "label": "Rate control in atrial fibrillation" },
+          { "id": "asthma", "label": "Asthma prophylaxis" },
+          { "id": "migraine", "label": "Migraine prophylaxis" }
+        ],
+        "correct": ["htn", "angina", "hfref", "afRate"],
+        "explanation": "Used across HTN/angina/HFrEF and AF rate control. Avoid in asthma (bronchospasm); bisoprolol is not a standard choice for migraine prophylaxis compared with propranolol."
+      },
+      {
+        "id": "moa",
+        "title": "Mechanism of action",
+        "prompt": "Which best describes bisoprolol’s mechanism?",
+        "type": "single",
+        "options": [
+          { "id": "true", "label": "Blocks cardiac β1-adrenergic receptors → ↓HR/contractility and ↓renin release" },
+          { "id": "thiazide", "label": "Inhibits Na⁺/Cl⁻ cotransporter in the distal convoluted tubule" },
+          { "id": "ccbmech", "label": "Blocks L-type Ca²⁺ channels" },
+          { "id": "acei", "label": "Inhibits ACE to reduce Ang II" }
+        ],
+        "correct": ["true"],
+        "explanation": "β1 blockade reduces chronotropy/inotropy and renin secretion. The other options are distinct mechanisms."
+      },
+      {
+        "id": "adrs",
+        "title": "Important adverse reactions",
+        "prompt": "Select ALL clinically important adverse reactions of bisoprolol.",
+        "type": "multi",
+        "options": [
+          { "id": "brady", "label": "Bradycardia/AV block" },
+          { "id": "fatigue", "label": "Fatigue, exercise intolerance" },
+          { "id": "bronch", "label": "Bronchospasm (esp. in asthma/COPD)" },
+          { "id": "cold", "label": "Cold extremities" },
+          { "id": "sex", "label": "Sexual dysfunction" },
+          { "id": "cough", "label": "Persistent dry cough" }
+        ],
+        "correct": ["brady", "fatigue", "bronch", "cold", "sex"],
+        "explanation": "Typical β-blocker effects: bradyarrhythmia, fatigue, bronchospasm (loss of β2-mediated bronchodilation), cold peripheries, sexual dysfunction. Dry cough is characteristic of ACE inhibitors, not β-blockers."
+      },
+      {
+        "id": "interactions",
+        "title": "Important drug–drug interactions",
+        "prompt": "Select ALL clinically important interactions with bisoprolol.",
+        "type": "multi",
+        "options": [
+          { "id": "verap", "label": "Non-DHP CCBs (verapamil/diltiazem)" },
+          { "id": "dig", "label": "Digoxin" },
+          { "id": "clon", "label": "Clonidine (abrupt withdrawal)" },
+          { "id": "amio", "label": "Amiodarone" },
+          { "id": "nitrates", "label": "Organic nitrates" }
+        ],
+        "correct": ["verap", "dig", "clon", "amio"],
+        "explanation": "Additive AV-nodal depression with non-DHP CCBs, digoxin, and amiodarone; clonidine withdrawal can cause rebound hypertension exacerbated by β-blockade. Nitrates are generally safe with β-blockers."
+      }
+    ]
+  },
+
   {
     "name": "metformin",
     "tags": ["endocrine"],
-    "anchors": [     
-    {
-      "id": "class",
-      "title": "Drug class",
-      "prompt": "Which class does metformin belong to?",
-      "type": "single",
-      "options": [
-        { "id": "big", "label": "Biguanide" },
-        { "id": "sulf", "label": "Sulfonylurea" },
-        { "id": "dpp4", "label": "DPP-4 inhibitor" }
-      ],
-      "correct": ["big"],
-      "explanation": "Metformin is a biguanide."
-    },
-    {
-      "id": "indications",
-      "title": "Common indications",
-      "prompt": "Select ALL common indications.",
-      "type": "multi",
-      "options": [
-        { "id": "t2dm", "label": "Type 2 diabetes (first-line)" },
-        { "id": "pco", "label": "Polycystic ovary syndrome (off-label)" },
-        { "id": "t1dm", "label": "Type 1 diabetes" }
-      ],
-      "correct": ["t2dm", "pco"],
-      "explanation": "First-line for T2DM; sometimes used in PCOS."
-    },
-    {
-      "id": "moa",
-      "title": "Mechanism of action",
-      "prompt": "Which statement best describes the mechanism?",
-      "type": "single",
-      "options": [
-        { "id": "ampk", "label": "Activates AMPK → ↓hepatic gluconeogenesis; ↑peripheral uptake" },
-        { "id": "ins", "label": "Stimulates pancreatic insulin release" },
-        { "id": "slgt2", "label": "Inhibits renal glucose reabsorption" }
-      ],
-      "correct": ["ampk"],
-      "explanation": "AMPK activation reduces hepatic glucose output."
-    },
-    {
-      "id": "adrs",
-      "title": "Important adverse reactions",
-      "prompt": "Select ALL clinically important ADRs.",
-      "type": "multi",
-      "options": [
-        { "id": "gi", "label": "GI upset (nausea/diarrhoea)" },
-        { "id": "la", "label": "Lactic acidosis (rare; caution in renal impairment)" },
-        { "id": "hypo", "label": "Hypoglycaemia" },
-        { "id": "b12", "label": "↓Vitamin B12 levels" }
-      ],
-      "correct": ["gi", "la", "b12"],
-      "explanation": "GI effects common; rare lactic acidosis; B12 can fall."
-    },
-    {
-      "id": "interactions",
-      "title": "Important drug–drug interactions",
-      "prompt": "Select ALL interactions of concern.",
-      "type": "multi",
-      "options": [
-        { "id": "ivcontrast", "label": "Iodinated contrast in renal impairment" },
-        { "id": "alcohol", "label": "Excess alcohol" },
-        { "id": "cimet", "label": "Cimetidine" }
-      ],
-      "correct": ["ivcontrast", "alcohol"],
-      "explanation": "Contrast & alcohol ↑ lactic acidosis risk."
-    }
-  ]
-},
-{
-  "name": "bisoprolol",
-  "tags": ["cardio"],
-  "anchors": [
-    {
-      "id": "class",
-      "title": "Drug class",
-      "prompt": "Which class does bisoprolol belong to?",
-      "type": "single",
-      "options": [
-        { "id": "bb1", "label": "β1-selective beta-blocker" },
-        { "id": "ccb", "label": "Calcium-channel blocker" },
-        { "id": "ace", "label": "ACE inhibitor" }
-      ],
-      "correct": ["bb1"],
-      "explanation": "β1-selective beta-blocker."
-    },
-    {
-      "id": "indications",
-      "title": "Common indications",
-      "prompt": "Select ALL common indications.",
-      "type": "multi",
-      "options": [
-        { "id": "htn", "label": "Hypertension (adjunct)" },
-        { "id": "angina", "label": "Angina" },
-        { "id": "hf", "label": "Heart failure with reduced EF" },
-        { "id": "af", "label": "Rate control in AF" }
-      ],
-      "correct": ["htn", "angina", "hf", "af"],
-      "explanation": "Used across HTN/angina/HFrEF/rate control."
-    },
-    {
-      "id": "moa",
-      "title": "Mechanism of action",
-      "prompt": "Which statement best describes the mechanism?",
-      "type": "single",
-      "options": [
-        { "id": "b1", "label": "Blocks cardiac β1 receptors → ↓HR/contractility" },
-        { "id": "vaso", "label": "Direct arterial vasodilator" },
-        { "id": "diur", "label": "Inhibits Na⁺/Cl⁻ cotransporter (DCT)" }
-      ],
-      "correct": ["b1"],
-      "explanation": "Negative chronotrope/inotrope via β1 blockade."
-    },
-    {
-      "id": "adrs",
-      "title": "Important adverse reactions",
-      "prompt": "Select ALL clinically important ADRs.",
-      "type": "multi",
-      "options": [
-        { "id": "brady", "label": "Bradycardia" },
-        { "id": "fatigue", "label": "Fatigue" },
-        { "id": "bronch", "label": "Bronchospasm (caution in asthma)" },
-        { "id": "impot", "label": "Sexual dysfunction" }
-      ],
-      "correct": ["brady", "fatigue", "bronch", "impot"],
-      "explanation": "Class effects of beta-blockers."
-    },
-    {
-      "id": "interactions",
-      "title": "Important drug–drug interactions",
-      "prompt": "Select ALL interactions of concern.",
-      "type": "multi",
-      "options": [
-        { "id": "ccbn", "label": "Non-DHP CCBs (verapamil/diltiazem)" },
-        { "id": "dig", "label": "Digoxin" },
-        { "id": "clon", "label": "Clonidine (withdrawal)" }
-      ],
-      "correct": ["ccbn", "dig", "clon"],
-      "explanation": "Additive AV nodal effects; clonidine rebound."
-    }
-  ]
-},
-{
-  "name": "omeprazole",
-  "tags": ["gi"],
-  "anchors": [
-    {
-      "id": "class",
-      "title": "Drug class",
-      "prompt": "Which class does omeprazole belong to?",
-      "type": "single",
-      "options": [
-        { "id": "ppi", "label": "Proton pump inhibitor" },
-        { "id": "h2", "label": "H2 receptor antagonist" },
-        { "id": "antacid", "label": "Antacid" }
-      ],
-      "correct": ["ppi"],
-      "explanation": "Irreversibly blocks gastric H⁺/K⁺ ATPase."
-    },
-    {
-      "id": "indications",
-      "title": "Common indications",
-      "prompt": "Select ALL common indications.",
-      "type": "multi",
-      "options": [
-        { "id": "gord", "label": "GORD/peptic ulcer disease" },
-        { "id": "hpy", "label": "H. pylori eradication (triple therapy)" },
-        { "id": "nsaid", "label": "NSAID gastroprotection" },
-        { "id": "constip", "label": "Constipation" }
-      ],
-      "correct": ["gord", "hpy", "nsaid"],
-      "explanation": "Standard acid-suppression indications."
-    },
-    {
-      "id": "moa",
-      "title": "Mechanism of action",
-      "prompt": "Which statement best describes the mechanism?",
-      "type": "single",
-      "options": [
-        { "id": "ptrue", "label": "Irreversible inhibition of gastric H⁺/K⁺ ATPase (parietal cells)" },
-        { "id": "h2blk", "label": "Blocks H2 receptors" },
-        { "id": "base", "label": "Neutralises gastric acid" }
-      ],
-      "correct": ["ptrue"],
-      "explanation": "Covalent binding to the proton pump."
-    },
-    {
-      "id": "adrs",
-      "title": "Important adverse reactions",
-      "prompt": "Select ALL clinically important ADRs.",
-      "type": "multi",
-      "options": [
-        { "id": "cdi", "label": "↑Risk of C. difficile" },
-        { "id": "fract", "label": "Fracture risk (long-term/high dose)" },
-        { "id": "hypomg", "label": "Hypomagnesaemia (long-term)" },
-        { "id": "rash", "label": "Rash" }
-      ],
-      "correct": ["cdi", "fract", "hypomg"],
-      "explanation": "Long-term safety considerations."
-    },
-    {
-      "id": "interactions",
-      "title": "Important drug–drug interactions",
-      "prompt": "Select ALL interactions of concern.",
-      "type": "multi",
-      "options": [
-        { "id": "clop", "label": "Clopidogrel (CYP2C19 interaction)" },
-        { "id": "war", "label": "Warfarin (monitor INR)" },
-        { "id": "ket", "label": "Drugs needing acidic pH (e.g., ketoconazole)" }
-      ],
-      "correct": ["clop", "ket"],
-      "explanation": "Reduces clopidogrel activation; raises gastric pH."
-    }
-  ]
-}
+    "anchors": [
+      {
+        "id": "class",
+        "title": "Drug class",
+        "prompt": "Which class does metformin belong to?",
+        "type": "single",
+        "options": [
+          { "id": "big", "label": "Biguanide" },
+          { "id": "sulf", "label": "Sulfonylurea" },
+          { "id": "dpp4", "label": "DPP-4 inhibitor" },
+          { "id": "sglt2", "label": "SGLT2 inhibitor" }
+        ],
+        "correct": ["big"],
+        "explanation": "Metformin is a biguanide; it is not a secretagogue (sulfonylurea) nor DPP-4/SGLT2 inhibitor."
+      },
+      {
+        "id": "indications",
+        "title": "Common indications",
+        "prompt": "Select ALL appropriate indications for metformin.",
+        "type": "multi",
+        "options": [
+          { "id": "t2dm", "label": "Type 2 diabetes mellitus (first-line)" },
+          { "id": "pcos", "label": "Polycystic ovary syndrome (insulin resistance; off-label/common practice)" },
+          { "id": "t1dm", "label": "Type 1 diabetes mellitus" },
+          { "id": "dka", "label": "Diabetic ketoacidosis treatment" },
+          { "id": "obesityOnly", "label": "Weight loss in euglycaemic patients (sole indication)" }
+        ],
+        "correct": ["t2dm", "pcos"],
+        "explanation": "First-line for T2DM and commonly used for PCOS-related insulin resistance. It is not used for T1DM alone, not for DKA, and not as a stand-alone obesity drug in euglycaemia."
+      },
+      {
+        "id": "moa",
+        "title": "Mechanism of action",
+        "prompt": "Which best describes metformin’s mechanism?",
+        "type": "single",
+        "options": [
+          { "id": "true", "label": "Activates AMPK → ↓hepatic gluconeogenesis; ↑peripheral glucose uptake" },
+          { "id": "ins", "label": "Stimulates pancreatic insulin release" },
+          { "id": "sglt2mech", "label": "Inhibits renal glucose reabsorption (proximal tubule)" },
+          { "id": "dpp4mech", "label": "Prevents incretin breakdown" }
+        ],
+        "correct": ["true"],
+        "explanation": "AMPK activation reduces hepatic glucose output and improves insulin sensitivity; it does not stimulate insulin secretion or affect SGLT2/DPP-4."
+      },
+      {
+        "id": "adrs",
+        "title": "Important adverse reactions",
+        "prompt": "Select ALL clinically important adverse reactions of metformin.",
+        "type": "multi",
+        "options": [
+          { "id": "gi", "label": "GI upset (nausea/diarrhoea), metallic taste" },
+          { "id": "lactic", "label": "Lactic acidosis (rare; risk ↑ in renal/hepatic failure or hypoxia)" },
+          { "id": "b12", "label": "Vitamin B12 deficiency with long-term use" },
+          { "id": "hypo", "label": "Hypoglycaemia (monotherapy)" },
+          { "id": "weightGain", "label": "Weight gain" }
+        ],
+        "correct": ["gi", "lactic", "b12"],
+        "explanation": "GI effects are common; rare lactic acidosis is the key serious risk; B12 can fall over time. Metformin alone does not usually cause hypoglycaemia and does not cause weight gain."
+      },
+      {
+        "id": "interactions",
+        "title": "Important drug–drug/intervention interactions",
+        "prompt": "Select ALL interactions of concern with metformin.",
+        "type": "multi",
+        "options": [
+          { "id": "contrast", "label": "Iodinated contrast in patients with renal impairment" },
+          { "id": "alcohol", "label": "Excess alcohol use" },
+          { "id": "cimet", "label": "Cimetidine (competition for renal tubular secretion)" },
+          { "id": "warfarin", "label": "Warfarin" },
+          { "id": "ppi", "label": "Proton-pump inhibitors" }
+        ],
+        "correct": ["contrast", "alcohol", "cimet"],
+        "explanation": "Contrast and alcohol can precipitate lactic acidosis; cimetidine can raise metformin levels by reducing renal secretion. Warfarin/PPIs are not key metformin interactions."
+      }
+    ]
+  }
 ]
-
