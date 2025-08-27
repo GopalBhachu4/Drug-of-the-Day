@@ -15,7 +15,7 @@
           { "id": "bb", "label": "Beta-blocker" }
         ],
         "correct": ["ace"],
-        "explanation": "Ramipril is an ACE inhibitor."
+        "explanation": "Ramipril is an ACE inhibitor (prodrug → ramiprilat)."
       },
       {
         "id": "indications",
@@ -26,10 +26,11 @@
           { "id": "htn", "label": "Hypertension" },
           { "id": "hfrEF", "label": "Heart failure with reduced EF" },
           { "id": "postmi", "label": "Post-MI / secondary prevention" },
-          { "id": "ckd", "label": "CKD with albuminuria" }
+          { "id": "ckd", "label": "CKD with albuminuria (incl. diabetic nephropathy)" },
+          { "id": "angina", "label": "Stable angina" }
         ],
         "correct": ["htn", "hfrEF", "postmi", "ckd"],
-        "explanation": "Standard indications."
+        "explanation": "HTN, HFrEF, post-MI, CKD with albuminuria are standard indications."
       },
       {
         "id": "moa",
@@ -37,12 +38,12 @@
         "prompt": "Which statement best describes the mechanism?",
         "type": "single",
         "options": [
-          { "id": "moa_true", "label": "Inhibits ACE → ↓Ang II/aldosterone; ↑bradykinin" },
+          { "id": "moa_true", "label": "Inhibits ACE → ↓Ang II & ↓aldosterone + ↑bradykinin → vasodilation" },
           { "id": "moa_arb", "label": "Blocks AT1 receptor (ARB)" },
           { "id": "moa_ccb", "label": "Blocks L-type Ca²⁺ channels" }
         ],
         "correct": ["moa_true"],
-        "explanation": "ACE inhibition with bradykinin effect."
+        "explanation": "ACE inhibition lowers Ang II/aldosterone; bradykinin rises."
       },
       {
         "id": "adrs",
@@ -57,7 +58,7 @@
           { "id": "renal", "label": "Rise in creatinine/AKI risk" }
         ],
         "correct": ["cough", "angio", "k", "hypo", "renal"],
-        "explanation": "Cough/angioedema, hyperkalaemia, hypotension, creatinine rise."
+        "explanation": "Cough/angioedema (bradykinin), hyperkalaemia, hypotension, creatinine rise."
       },
       {
         "id": "interactions",
@@ -65,7 +66,7 @@
         "prompt": "Select ALL interactions of concern.",
         "type": "multi",
         "options": [
-          { "id": "kplus", "label": "K⁺ supplements / K-sparing diuretics" },
+          { "id": "kplus", "label": "K⁺ supplements / K-sparing diuretics (e.g., spironolactone)" },
           { "id": "nsaids", "label": "NSAIDs (esp. chronic)" },
           { "id": "lithium", "label": "Lithium" },
           { "id": "dualraas", "label": "Dual RAAS blockade (ARB/aliskiren)" }
@@ -76,82 +77,82 @@
     ]
   },
   {
-    {
-  "name": "atorvastatin",
-  "tags": ["cardio"],
-  "anchors": [
-    {
-      "id": "class",
-      "title": "Drug class",
-      "prompt": "Which class does atorvastatin belong to?",
-      "type": "single",
-      "options": [
-        { "id": "statin", "label": "HMG-CoA reductase inhibitor (statin)" },
-        { "id": "ezet",  "label": "Cholesterol absorption inhibitor (ezetimibe)" },
-        { "id": "pcsk9", "label": "PCSK9 inhibitor" },
-        { "id": "ace",   "label": "ACE inhibitor" },
-        { "id": "ccb",   "label": "Calcium-channel blocker" }
-      ],
-      "correct": ["statin"],
-      "explanation": "Atorvastatin is a statin."
-    },
-    {
-      "id": "indications",
-      "title": "Common indications",
-      "prompt": "Select ALL common indications.",
-      "type": "multi",
-      "options": [
-        { "id": "hyperlipid", "label": "Primary hypercholesterolaemia" },
-        { "id": "fh",         "label": "Familial hypercholesterolaemia (HeFH/HoFH) – adjunct" },
-        { "id": "prevention", "label": "Cardiovascular risk reduction / secondary prevention" },
-        { "id": "angina",     "label": "Stable angina treatment" },
-        { "id": "pain",       "label": "Analgesia" }
-      ],
-      "correct": ["hyperlipid", "fh", "prevention"],
-      "explanation": "Lipid lowering (incl. familial forms); CV risk reduction."
-    },
-    {
-      "id": "moa",
-      "title": "Mechanism of action",
-      "prompt": "Which statement best describes the mechanism?",
-      "type": "single",
-      "options": [
-        { "id": "moa_true", "label": "Inhibits HMG-CoA reductase → ↓cholesterol synthesis; ↑LDL receptors" },
-        { "id": "moa_upreg","label": "Upregulates hepatic LDL receptors, increasing LDL clearance" },
-        { "id": "moa_ace",  "label": "Inhibits ACE" },
-        { "id": "moa_ccb",  "label": "Blocks L-type Ca²⁺ channels" }
-      ],
-      "correct": ["moa_true"],
-      "explanation": "Primary action is HMG-CoA reductase inhibition; LDL-receptor upregulation follows."
-    },
-    {
-      "id": "adrs",
-      "title": "Important adverse reactions",
-      "prompt": "Select ALL clinically important ADRs.",
-      "type": "multi",
-      "options": [
-        { "id": "myopathy", "label": "Myalgia/myopathy (rare rhabdomyolysis)" },
-        { "id": "lfts",     "label": "↑Transaminases/hepatotoxicity" },
-        { "id": "gi",       "label": "GI upset" },
-        { "id": "dm",       "label": "Small increase in diabetes risk" },
-        { "id": "cough",    "label": "Dry cough" }
-      ],
-      "correct": ["myopathy", "lfts", "gi", "dm"],
-      "explanation": "Muscle symptoms, LFT elevation, GI upset; slight ↑ risk of new-onset diabetes."
-    },
-    {
-      "id": "interactions",
-      "title": "Important drug–drug interactions",
-      "prompt": "Select ALL interactions of concern.",
-      "type": "multi",
-      "options": [
-        { "id": "cyp3a4",   "label": "Strong CYP3A4 inhibitors (e.g., clarithromycin, azoles, HIV protease inhibitors)" },
-        { "id": "gfj",      "label": "Grapefruit juice (large amounts)" },
-        { "id": "fibrates", "label": "Fibrates (e.g., gemfibrozil)" },
-        { "id": "warfarin", "label": "Warfarin" }
-      ],
-      "correct": ["cyp3a4", "gfj", "fibrates"],
-      "explanation": "CYP3A4 inhibitors and grapefruit raise statin levels; fibrates add myopathy risk."
-    }
-  ]
-}
+    "name": "atorvastatin",
+    "tags": ["cardio"],
+    "anchors": [
+      {
+        "id": "class",
+        "title": "Drug class",
+        "prompt": "Which class does atorvastatin belong to?",
+        "type": "single",
+        "options": [
+          { "id": "statin", "label": "HMG-CoA reductase inhibitor (statin)" },
+          { "id": "ezet",  "label": "Cholesterol absorption inhibitor (ezetimibe)" },
+          { "id": "pcsk9", "label": "PCSK9 inhibitor" },
+          { "id": "ace",   "label": "ACE inhibitor" },
+          { "id": "ccb",   "label": "Calcium-channel blocker" }
+        ],
+        "correct": ["statin"],
+        "explanation": "Atorvastatin is a statin."
+      },
+      {
+        "id": "indications",
+        "title": "Common indications",
+        "prompt": "Select ALL common indications.",
+        "type": "multi",
+        "options": [
+          { "id": "hyperlipid", "label": "Primary hypercholesterolaemia" },
+          { "id": "fh",         "label": "Familial hypercholesterolaemia (adjunct)" },
+          { "id": "prevention", "label": "CV risk reduction / secondary prevention" },
+          { "id": "angina",     "label": "Stable angina treatment" },
+          { "id": "pain",       "label": "Analgesia" }
+        ],
+        "correct": ["hyperlipid", "fh", "prevention"],
+        "explanation": "Lipid lowering (incl. familial forms); cardiovascular risk reduction."
+      },
+      {
+        "id": "moa",
+        "title": "Mechanism of action",
+        "prompt": "Which statement best describes the mechanism?",
+        "type": "single",
+        "options": [
+          { "id": "moa_true", "label": "Inhibits HMG-CoA reductase → ↓cholesterol synthesis; ↑LDL receptors" },
+          { "id": "moa_upreg","label": "Upregulates hepatic LDL receptors increasing LDL clearance" },
+          { "id": "moa_ace",  "label": "Inhibits ACE" },
+          { "id": "moa_ccb",  "label": "Blocks L-type Ca²⁺ channels" }
+        ],
+        "correct": ["moa_true"],
+        "explanation": "Primary action is HMG-CoA reductase inhibition; LDL-receptor upregulation follows."
+      },
+      {
+        "id": "adrs",
+        "title": "Important adverse reactions",
+        "prompt": "Select ALL clinically important ADRs.",
+        "type": "multi",
+        "options": [
+          { "id": "myopathy", "label": "Myalgia/myopathy (rare rhabdomyolysis)" },
+          { "id": "lfts",     "label": "↑Transaminases/hepatotoxicity" },
+          { "id": "gi",       "label": "GI upset" },
+          { "id": "dm",       "label": "Small increase in diabetes risk" },
+          { "id": "cough",    "label": "Dry cough" }
+        ],
+        "correct": ["myopathy", "lfts", "gi", "dm"],
+        "explanation": "Muscle symptoms, LFT elevation, GI upset; slight ↑ risk of new-onset diabetes."
+      },
+      {
+        "id": "interactions",
+        "title": "Important drug–drug interactions",
+        "prompt": "Select ALL interactions of concern.",
+        "type": "multi",
+        "options": [
+          { "id": "cyp3a4",   "label": "Strong CYP3A4 inhibitors (e.g., clarithromycin, azoles, protease inhibitors)" },
+          { "id": "gfj",      "label": "Grapefruit juice (large amounts)" },
+          { "id": "fibrates", "label": "Fibrates (e.g., gemfibrozil)" },
+          { "id": "warfarin", "label": "Warfarin" }
+        ],
+        "correct": ["cyp3a4", "gfj", "fibrates"],
+        "explanation": "CYP3A4 inhibitors & grapefruit raise statin levels; fibrates add myopathy risk."
+      }
+    ]
+  }
+]
