@@ -82,7 +82,6 @@
       }
     ]
   },
-
   {
     "name": "atorvastatin",
     "tags": ["cardio", "lipids"],
@@ -246,7 +245,6 @@
       }
     ]
   },
-
   {
     "name": "metformin",
     "tags": ["endocrine"],
