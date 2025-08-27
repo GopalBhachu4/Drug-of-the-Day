@@ -552,12 +552,11 @@ function pickDrugForToday(): Drug {
                   : "bg-gray-200 text-gray-600 cursor-not-allowed"
               }`}
               disabled={!ready}
-              onClick={() => {
-                window.localStorage.removeItem("dotd_next_at");
-                setNextAt(null);
-                setShowCompleted(false);
-                setIdx(0);
-              }}
+    onClick={() => {
+  window.localStorage.removeItem("dotd_next_at");
+  // Reload so we re-pick the drug based on the current date/time
+  window.location.reload();
+}}
             >
               {ready ? "Start next dose" : "Locked until 09:00"}
             </button>
