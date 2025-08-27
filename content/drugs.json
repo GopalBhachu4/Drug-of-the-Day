@@ -139,7 +139,7 @@
         "correct": ["myopathy", "lfts", "gi", "dm"],
         "explanation": "Muscle symptoms, LFT elevation, GI upset; slight ↑ risk of new-onset diabetes."
       },
-           {
+            {
         "id": "interactions",
         "title": "Important drug–drug interactions",
         "prompt": "Select ALL interactions of concern.",
@@ -158,7 +158,7 @@
   {
     "name": "metformin",
     "tags": ["endocrine"],
-    "anchors": [
+    "anchors": [     
     {
       "id": "class",
       "title": "Drug class",
