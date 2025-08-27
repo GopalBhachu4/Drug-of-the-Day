@@ -93,8 +93,8 @@
         "prompt": "Which class does atorvastatin belong to?",
         "type": "single",
         "options": [
-          { "id": "statin", "label": "HMG-CoA reductase inhibitor (statin)" },
-          { "id": "ezet",  "label": "Cholesterol absorption inhibitor (ezetimibe)" },
+          { "id": "statin", "label": "HMG-CoA reductase inhibitor" },
+          { "id": "ezet",  "label": "Cholesterol absorption inhibitor" },
           { "id": "pcsk9", "label": "PCSK9 inhibitor" },
           { "id": "ace",   "label": "ACE inhibitor" },
           { "id": "ccb",   "label": "Calcium-channel blocker" }
