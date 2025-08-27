@@ -139,7 +139,7 @@
         "correct": ["myopathy", "lfts", "gi", "dm"],
         "explanation": "Muscle symptoms, LFT elevation, GI upset; slight ↑ risk of new-onset diabetes."
       },
-      {
+           {
         "id": "interactions",
         "title": "Important drug–drug interactions",
         "prompt": "Select ALL interactions of concern.",
@@ -152,13 +152,13 @@
         ],
         "correct": ["cyp3a4", "gfj", "fibrates"],
         "explanation": "CYP3A4 inhibitors & grapefruit raise statin levels; fibrates add myopathy risk."
-            }
+      }
     ]
   },
   {
-  "name": "metformin",
-  "tags": ["endocrine"],
-  "anchors": [
+    "name": "metformin",
+    "tags": ["endocrine"],
+    "anchors": [
     {
       "id": "class",
       "title": "Drug class",
