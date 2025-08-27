@@ -154,8 +154,8 @@
         "explanation": "CYP3A4 inhibitors & grapefruit raise statin levels; fibrates add myopathy risk."
       },
     ]
-  }
- {
+  },
+{
   "name": "metformin",
   "tags": ["endocrine"],
   "anchors": [
@@ -183,7 +183,7 @@
         { "id": "t1dm", "label": "Type 1 diabetes" }
       ],
       "correct": ["t2dm", "pco"],
-      "explanation": "First-line for T2DM; used in PCOS."
+      "explanation": "First-line for T2DM; sometimes used in PCOS."
     },
     {
       "id": "moa",
@@ -196,7 +196,7 @@
         { "id": "slgt2", "label": "Inhibits renal glucose reabsorption" }
       ],
       "correct": ["ampk"],
-      "explanation": "Reduces hepatic glucose output via AMPK."
+      "explanation": "AMPK activation reduces hepatic glucose output."
     },
     {
       "id": "adrs",
@@ -224,6 +224,152 @@
       ],
       "correct": ["ivcontrast", "alcohol"],
       "explanation": "Contrast & alcohol ↑ lactic acidosis risk."
+    }
+  ]
+},
+{
+  "name": "bisoprolol",
+  "tags": ["cardio"],
+  "anchors": [
+    {
+      "id": "class",
+      "title": "Drug class",
+      "prompt": "Which class does bisoprolol belong to?",
+      "type": "single",
+      "options": [
+        { "id": "bb1", "label": "β1-selective beta-blocker" },
+        { "id": "ccb", "label": "Calcium-channel blocker" },
+        { "id": "ace", "label": "ACE inhibitor" }
+      ],
+      "correct": ["bb1"],
+      "explanation": "β1-selective beta-blocker."
+    },
+    {
+      "id": "indications",
+      "title": "Common indications",
+      "prompt": "Select ALL common indications.",
+      "type": "multi",
+      "options": [
+        { "id": "htn", "label": "Hypertension (adjunct)" },
+        { "id": "angina", "label": "Angina" },
+        { "id": "hf", "label": "Heart failure with reduced EF" },
+        { "id": "af", "label": "Rate control in AF" }
+      ],
+      "correct": ["htn", "angina", "hf", "af"],
+      "explanation": "Used across HTN/angina/HFrEF/rate control."
+    },
+    {
+      "id": "moa",
+      "title": "Mechanism of action",
+      "prompt": "Which statement best describes the mechanism?",
+      "type": "single",
+      "options": [
+        { "id": "b1", "label": "Blocks cardiac β1 receptors → ↓HR/contractility" },
+        { "id": "vaso", "label": "Direct arterial vasodilator" },
+        { "id": "diur", "label": "Inhibits Na⁺/Cl⁻ cotransporter (DCT)" }
+      ],
+      "correct": ["b1"],
+      "explanation": "Negative chronotrope/inotrope via β1 blockade."
+    },
+    {
+      "id": "adrs",
+      "title": "Important adverse reactions",
+      "prompt": "Select ALL clinically important ADRs.",
+      "type": "multi",
+      "options": [
+        { "id": "brady", "label": "Bradycardia" },
+        { "id": "fatigue", "label": "Fatigue" },
+        { "id": "bronch", "label": "Bronchospasm (caution in asthma)" },
+        { "id": "impot", "label": "Sexual dysfunction" }
+      ],
+      "correct": ["brady", "fatigue", "bronch", "impot"],
+      "explanation": "Class effects of beta-blockers."
+    },
+    {
+      "id": "interactions",
+      "title": "Important drug–drug interactions",
+      "prompt": "Select ALL interactions of concern.",
+      "type": "multi",
+      "options": [
+        { "id": "ccbn", "label": "Non-DHP CCBs (verapamil/diltiazem)" },
+        { "id": "dig", "label": "Digoxin" },
+        { "id": "clon", "label": "Clonidine (withdrawal)" }
+      ],
+      "correct": ["ccbn", "dig", "clon"],
+      "explanation": "Additive AV nodal effects; clonidine rebound."
+    }
+  ]
+},
+{
+  "name": "omeprazole",
+  "tags": ["gi"],
+  "anchors": [
+    {
+      "id": "class",
+      "title": "Drug class",
+      "prompt": "Which class does omeprazole belong to?",
+      "type": "single",
+      "options": [
+        { "id": "ppi", "label": "Proton pump inhibitor" },
+        { "id": "h2", "label": "H2 receptor antagonist" },
+        { "id": "antacid", "label": "Antacid" }
+      ],
+      "correct": ["ppi"],
+      "explanation": "Irreversibly blocks gastric H⁺/K⁺ ATPase."
+    },
+    {
+      "id": "indications",
+      "title": "Common indications",
+      "prompt": "Select ALL common indications.",
+      "type": "multi",
+      "options": [
+        { "id": "gord", "label": "GORD/peptic ulcer disease" },
+        { "id": "hpy", "label": "H. pylori eradication (triple therapy)" },
+        { "id": "nsaid", "label": "NSAID gastroprotection" },
+        { "id": "constip", "label": "Constipation" }
+      ],
+      "correct": ["gord", "hpy", "nsaid"],
+      "explanation": "Standard acid-suppression indications."
+    },
+    {
+      "id": "moa",
+      "title": "Mechanism of action",
+      "prompt": "Which statement best describes the mechanism?",
+      "type": "single",
+      "options": [
+        { "id": "ptrue", "label": "Irreversible inhibition of gastric H⁺/K⁺ ATPase (parietal cells)" },
+        { "id": "h2blk", "label": "Blocks H2 receptors" },
+        { "id": "base", "label": "Neutralises gastric acid" }
+      ],
+      "correct": ["ptrue"],
+      "explanation": "Covalent binding to the proton pump."
+    },
+    {
+      "id": "adrs",
+      "title": "Important adverse reactions",
+      "prompt": "Select ALL clinically important ADRs.",
+      "type": "multi",
+      "options": [
+        { "id": "cdi", "label": "↑Risk of C. difficile" },
+        { "id": "fract", "label": "Fracture risk (long-term/high dose)" },
+        { "id": "hypomg", "label": "Hypomagnesaemia (long-term)" },
+        { "id": "rash", "label": "Rash" }
+      ],
+      "correct": ["cdi", "fract", "hypomg"],
+      "explanation": "Long-term safety considerations."
+    },
+    {
+      "id": "interactions",
+      "title": "Important drug–drug interactions",
+      "prompt": "Select ALL interactions of concern.",
+      "type": "multi",
+      "options": [
+        { "id": "clop", "label": "Clopidogrel (CYP2C19 interaction)" },
+        { "id": "war", "label": "Warfarin (monitor INR)" },
+        { "id": "ket", "label": "Drugs needing acidic pH (e.g., ketoconazole)" }
+      ],
+      "correct": ["clop", "ket"],
+      "explanation": "Reduces clopidogrel activation; raises gastric pH."
     }
   ]
 }
