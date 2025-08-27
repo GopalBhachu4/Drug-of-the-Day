@@ -152,7 +152,80 @@
         ],
         "correct": ["cyp3a4", "gfj", "fibrates"],
         "explanation": "CYP3A4 inhibitors & grapefruit raise statin levels; fibrates add myopathy risk."
-      }
+      },
     ]
   }
+ {
+  "name": "metformin",
+  "tags": ["endocrine"],
+  "anchors": [
+    {
+      "id": "class",
+      "title": "Drug class",
+      "prompt": "Which class does metformin belong to?",
+      "type": "single",
+      "options": [
+        { "id": "big", "label": "Biguanide" },
+        { "id": "sulf", "label": "Sulfonylurea" },
+        { "id": "dpp4", "label": "DPP-4 inhibitor" }
+      ],
+      "correct": ["big"],
+      "explanation": "Metformin is a biguanide."
+    },
+    {
+      "id": "indications",
+      "title": "Common indications",
+      "prompt": "Select ALL common indications.",
+      "type": "multi",
+      "options": [
+        { "id": "t2dm", "label": "Type 2 diabetes (first-line)" },
+        { "id": "pco", "label": "Polycystic ovary syndrome (off-label)" },
+        { "id": "t1dm", "label": "Type 1 diabetes" }
+      ],
+      "correct": ["t2dm", "pco"],
+      "explanation": "First-line for T2DM; used in PCOS."
+    },
+    {
+      "id": "moa",
+      "title": "Mechanism of action",
+      "prompt": "Which statement best describes the mechanism?",
+      "type": "single",
+      "options": [
+        { "id": "ampk", "label": "Activates AMPK → ↓hepatic gluconeogenesis; ↑peripheral uptake" },
+        { "id": "ins", "label": "Stimulates pancreatic insulin release" },
+        { "id": "slgt2", "label": "Inhibits renal glucose reabsorption" }
+      ],
+      "correct": ["ampk"],
+      "explanation": "Reduces hepatic glucose output via AMPK."
+    },
+    {
+      "id": "adrs",
+      "title": "Important adverse reactions",
+      "prompt": "Select ALL clinically important ADRs.",
+      "type": "multi",
+      "options": [
+        { "id": "gi", "label": "GI upset (nausea/diarrhoea)" },
+        { "id": "la", "label": "Lactic acidosis (rare; caution in renal impairment)" },
+        { "id": "hypo", "label": "Hypoglycaemia" },
+        { "id": "b12", "label": "↓Vitamin B12 levels" }
+      ],
+      "correct": ["gi", "la", "b12"],
+      "explanation": "GI effects common; rare lactic acidosis; B12 can fall."
+    },
+    {
+      "id": "interactions",
+      "title": "Important drug–drug interactions",
+      "prompt": "Select ALL interactions of concern.",
+      "type": "multi",
+      "options": [
+        { "id": "ivcontrast", "label": "Iodinated contrast in renal impairment" },
+        { "id": "alcohol", "label": "Excess alcohol" },
+        { "id": "cimet", "label": "Cimetidine" }
+      ],
+      "correct": ["ivcontrast", "alcohol"],
+      "explanation": "Contrast & alcohol ↑ lactic acidosis risk."
+    }
+  ]
+}
 ]
+
