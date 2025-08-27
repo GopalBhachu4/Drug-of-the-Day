@@ -152,10 +152,10 @@
         ],
         "correct": ["cyp3a4", "gfj", "fibrates"],
         "explanation": "CYP3A4 inhibitors & grapefruit raise statin levels; fibrates add myopathy risk."
-      }
+            }
     ]
   },
-{
+  {
   "name": "metformin",
   "tags": ["endocrine"],
   "anchors": [
