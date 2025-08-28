@@ -655,9 +655,7 @@ function pickDrugForToday(): Drug {
               <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="rounded-xl px-4 py-2 bg-slate-900 text-white hover:bg-black" onClick={() => { setShowResults(false); setIdx(0); setAnswers({ class: [], indications: [], moa: [], adrs: [], interactions: [] }); }}>
                 Try again
               </motion.button>
-              <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="rounded-xl px-4 py-2 bg-white border hover:bg-gray-50" onClick={() => window.location.reload()}>
-                New drug (swap data)
-              </motion.button>
+           
               <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="rounded-xl px-4 py-2 bg-emerald-600 text-white hover:bg-emerald-700" onClick={markReviewComplete}>
                 Mark review complete →
               </motion.button>
