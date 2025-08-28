@@ -1,6 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import drugs from "../content/drugs.json";
+// Day tracker helpers
+const TOTAL_DAYS = (drugs as any[]).length;
+const titleCase = (s: string) => (s ? s[0].toUpperCase() + s.slice(1) : s);
 
 /**
  * Drug of the Day — single‑page prototype (animated + audio cues + back nav + 09:00 unlock)
@@ -316,6 +319,18 @@ function useDeviceLocation() {
 export default function DrugOfTheDay() {
  const START_DATE_ISO = "2025-09-01"; // change to the date you want Day 1 to begin
 const [drug] = useState<Drug>(() => pickDrugForToday());
+// Figure out which position this drug is in the JSON array
+const dayIndex = useMemo(
+  () => (drugs as any[]).findIndex((d: any) => d.name === (drug as any).name),
+  [drug]
+);
+const dayNumber = dayIndex >= 0 ? dayIndex + 1 : 1;
+const TOTAL_DAYS = (drugs as any[]).length;
+const titleCase = (s: string) => (s ? s[0].toUpperCase() + s.slice(1) : s);
+
+// (optional, used on the completed screen)
+const nextIndex = (dayIndex + 1) % TOTAL_DAYS;
+const nextDrugName = titleCase((drugs as any[])[nextIndex].name);
 
 function pickDrugForToday(): Drug {
   const now = new Date();
@@ -585,7 +600,9 @@ function pickDrugForToday(): Drug {
       <div className="min-h-screen bg-slate-50 flex items-start justify-center p-6">
         <div className="w-full max-w-3xl">
           <div className="mb-4 flex items-center gap-3">
-            <h1 className="text-2xl font-semibold">Drug of the Day — {drug.name}</h1>
+           <h1 className="text-2xl font-semibold">
+  Drug of the Day — Day {dayNumber} of {TOTAL_DAYS} — {titleCase((drug as any).name)}
+</h1>
             <div className="ml-auto flex items-center gap-2 text-sm">
               <Chip label={`Streak: ${streak} 🔥`} />
             </div>
@@ -674,7 +691,9 @@ function pickDrugForToday(): Drug {
     <div className="min-h-screen bg-slate-50 flex items-start justify-center p-6">
       <div className="w-full max-w-2xl">
         <header className="mb-4 flex items-center gap-3">
-          <h1 className="text-2xl font-semibold">Drug of the Day — {drug.name}</h1>
+          <h1 className="text-2xl font-semibold">
+  Drug of the Day — Day {dayNumber} of {TOTAL_DAYS} — {titleCase((drug as any).name)}
+</h1>   
           <div className="ml-auto flex items-center gap-2 text-sm">
             <Chip label={`Streak: ${streak} 🔥`} />
           </div>
